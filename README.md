@@ -1,17 +1,10 @@
 # autofixexample
 
-```mermaid
-graph TD
-    A[User Types a Request in Copilot] --> B[Copilot Parses the Request]
-    B --> C[API Call to Skillset Endpoint]
-    C --> D[Skillset API Responds with Structured Data]
-    D --> E[Copilot Uses the Response to Generate Output]
-```
+
 
 ``` mermaid
-
 graph TD
-    A[1. Install the GitHub App (grants initial permissions)] --> B[2. Redirect to GitHub Authorization Page (request permissions)]
+    A[Install the GitHub App ((grants initial permissions))] --> B[Redirect to GitHub Authorization Page (request permissions)]
     B --> C{3. User Grants Permissions?}
     C -- Yes --> D[4. App Requests Access Token (exchanges code for token)]
     C -- No --> E[End: Permissions Denied]
