@@ -1,1 +1,26 @@
 # autofixexample
+
+```mermaid
+graph TD
+    A[User Types a Request in Copilot] --> B[Copilot Parses the Request]
+    B --> C[API Call to Skillset Endpoint]
+    C --> D[Skillset API Responds with Structured Data]
+    D --> E[Copilot Uses the Response to Generate Output]
+```
+
+``` mermaid
+
+graph TD
+    A[1. Install the GitHub App (grants initial permissions)] --> B[2. Redirect to GitHub Authorization Page (request permissions)]
+    B --> C{3. User Grants Permissions?}
+    C -- Yes --> D[4. App Requests Access Token (exchanges code for token)]
+    C -- No --> E[End: Permissions Denied]
+    D --> F[5. App Makes Authenticated API Requests (using access token)]
+    F --> G{6. Token Expiry?}
+    G -- Yes --> H[App Requests New Token (refresh token)]
+    G -- No --> F
+    H --> F
+    F --> I{7. Revoking Permissions?}
+    I -- Yes --> J[End: Access Revoked]
+    I -- No --> F
+```
