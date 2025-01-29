@@ -4,7 +4,7 @@
 
 ``` mermaid
 graph TD
-    A[Install the GitHub App ((grants initial permissions))] --> B[Redirect to GitHub Authorization Page (request permissions)]
+    A[Install the GitHub App (grants initial permissions)] --> B[Redirect to GitHub Authorization Page (request permissions)]
     B --> C{3. User Grants Permissions?}
     C -- Yes --> D[4. App Requests Access Token (exchanges code for token)]
     C -- No --> E[End: Permissions Denied]
@@ -15,5 +15,5 @@ graph TD
     H --> F
     F --> I{7. Revoking Permissions?}
     I -- Yes --> J[End: Access Revoked]
-    I -- No --> K[Continue Using Token] --> F;  <!-- Added exit node to break infinite loop -->
+    I -- No --> K[Continue Using Token] --> F
 ```
