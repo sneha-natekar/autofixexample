@@ -15,5 +15,5 @@ graph TD
     H --> F
     F --> I{7. Revoking Permissions?}
     I -- Yes --> J[End: Access Revoked]
-    I -- No --> F
+    I -- No --> K[Continue Using Token] --> F;  <!-- Added exit node to break infinite loop -->
 ```
